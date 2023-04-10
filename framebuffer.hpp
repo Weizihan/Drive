@@ -16,16 +16,7 @@
 #include <string.h>
 
 #include "template_singleton.hpp"
-
-typedef unsigned int uint;
-typedef unsigned char* u_pchar;
-
-
-struct screen_info_t{
-    uint line_width;
-    uint pixel_width;
-    uint screen_size;
-};
+#include "types.hpp"
 
 class framebuffer
 {
@@ -43,6 +34,6 @@ private:
     void uinit();
 public:
     void setcolor();
-
+    void drawRect(int pos_x , int pos_y ,int rect_w , int rect_y);
 };
 
